@@ -9,6 +9,249 @@ body {
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;
   background: #f4f4f8;
+  /* padding-top: 56px; */
+}
+
+/* TOP NAV BAR*/
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 56px;
+  background: rgba(30, 15, 60, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(196, 181, 253, 0.15);
+}
+
+.nav-brand {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.6rem;
+  color: #fff;
+  text-shadow:
+    0 0 4px #6a0000,
+    0 0 20px #d0aaff,
+    0 0 6px #a64dff;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+/* OVERLAY MENU*/
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.nav-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 5, 32, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: -1;
+}
+
+.nav-overlay.open {
+  pointer-events: all;
+  opacity: 1;
+}
+
+/* Big "25Tiko" text inside overlay */
+.overlay-brand {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(3rem, 15vw, 8rem);
+  color: #fff;
+  text-shadow:
+    0 0 8px #6a0000,
+    0 0 40px #d0aaff,
+    0 0 16px #a64dff;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  user-select: none;
+}
+
+.nav-overlay.open .overlay-brand {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nav links list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 340px;
+}
+
+.nav-links li {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  width: 100%;
+}
+
+.nav-overlay.open .nav-links li:nth-child(1) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.18s;
+}
+
+.nav-overlay.open .nav-links li:nth-child(2) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.26s;
+}
+
+.nav-overlay.open .nav-links li:nth-child(3) {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.34s;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: 1.5px solid rgba(196, 181, 253, 0.2);
+  background: rgba(166, 77, 255, 0.1);
+  color: #e8d5ff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.3rem;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.nav-links a:hover {
+  background: rgba(166, 77, 255, 0.28);
+  border-color: rgba(196, 181, 253, 0.5);
+  transform: scale(1.03);
+  color: #fff;
+}
+
+/* .nav-icon {
+  font-size: 1.4rem;
+} */
+
+/*HAMBURGER BUTTON — fixed bottom-right*/
+.hamburger-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 1100;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #a64dff;
+  box-shadow:
+    0 0 0 4px rgba(166, 77, 255, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+}
+
+.hamburger-btn:hover {
+  background: #8b2fe8;
+  transform: scale(1.08);
+  box-shadow:
+    0 0 0 6px rgba(166, 77, 255, 0.3),
+    0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.hamburger-btn .bar {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.77, 0, 0.18, 1),
+    opacity 0.2s ease,
+    width 0.3s ease;
+  transform-origin: center;
+}
+
+/* X state */
+.hamburger-btn.open .bar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger-btn.open .bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-btn.open .bar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+#podium,
+#class-section,
+#client {
+  scroll-margin-top: 300px;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.lang-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid rgba(196, 181, 253, 0.3);
+  background: rgba(166, 77, 255, 0.1);
+  color: #e8d5ff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.lang-btn:hover {
+  background: rgba(166, 77, 255, 0.28);
+  border-color: rgba(196, 181, 253, 0.5);
+  transform: scale(1.08);
+  color: #fff;
+}
+
+.lang-btn.active {
+  background: #a64dff;
+  border-color: #a64dff;
+  color: #fff;
 }
 
 /*  HERO  */
@@ -55,15 +298,11 @@ body {
   color: #fff;
 }
 
-.hero-sub {
-  font-size: 0.95rem;
-  color: rgba(196, 181, 253, 0.85);
-  line-height: 1.5;
-}
+
 
 .glow {
   text-shadow:
-    0 0 4px #6a0000,
+    0 0 4px #e4d9e7,
     0 0 20px #d0aaff,
     0 0 6px #a64dff;
 }
@@ -72,6 +311,13 @@ body {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
+}
+.hero-sub {
+  font-size: 0.95rem;
+  color: rgba(196, 181, 253, 0.85);
+  line-height: 1.5;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .poster-frame {
@@ -156,9 +402,9 @@ body {
 .hanging-btn::after {
   content: "";
   position: absolute;
-  top: -160px;
+  top: -201px;
   width: 4px;
-  height: 160px;
+  height: 201px;
   z-index: 2;
   background: repeating-linear-gradient(45deg,
       #8b5a2b, #8b5a2b 4px,
@@ -213,13 +459,9 @@ body {
   opacity: 0.8;
 }
 
-/* ============================================
-   GAME SECTION — mobile-first grid
-   1 col → 2 col (640 px+) → 3 col (1024 px+)
-   ============================================ */
+/* GAME SECTION*/
 .game-section {
   background: #efecec;
-  /* Hidden by default; JS sets display:flex to reveal */
   display: none;
   flex-wrap: wrap;
   justify-content: center;
@@ -227,11 +469,10 @@ body {
   padding: 40px 16px 60px;
 }
 
-/* ---- GAME CARD ---- */
+/* GAME CARD */
 .game-card {
   background: #1e1b2f;
   border-radius: 18px;
-  /* Mobile: full width, one per row */
   width: 100%;
   max-width: 100%;
   padding: 18px;
@@ -284,7 +525,6 @@ body {
   margin-bottom: 14px;
   color: #ccc;
   line-height: 1.55;
-  /* Push buttons to bottom of card */
   flex: 1;
 }
 
@@ -296,7 +536,7 @@ body {
   padding-top: 14px;
 }
 
-/* ---- BUTTONS ---- */
+/* BUTTONS  */
 .trailer-btn,
 .team-btn,
 .download-btn {
@@ -338,9 +578,7 @@ body {
   background: #047857;
 }
 
-/* ============================================
-   WINNER PODIUM
-   ============================================ */
+/* WINNER PODIUM*/
 .podium-section {
   background: #3c287f;
   color: white;
@@ -353,7 +591,7 @@ body {
 
 .podium-title {
   font-family: 'Fredoka One', cursive;
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 120px;
   text-shadow: 0 0 10px #d0aaff;
 }
@@ -446,9 +684,7 @@ body {
   word-break: break-word;
 }
 
-/* ============================================
-   CLIENTS / SPONSORS
-   ============================================ */
+/*CLIENTS / SPONSORS*/
 .clients-section {
   background: #f8fafc;
   padding: 5rem 1.5rem 4.5rem;
@@ -531,9 +767,7 @@ body {
   opacity: 1;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* FOOTER*/
 .footer {
   background: #0f0520;
   color: rgba(196, 181, 253, 0.6);
@@ -544,10 +778,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* ============================================
-   RESPONSIVE — TABLET (640px+)
-   2 cards per row
-   ============================================ */
+/* RESPONSIVE — TABLET (640px+)*/
 @media (min-width: 640px) {
   .game-card {
     width: calc(50% - 12px);
@@ -557,11 +788,15 @@ body {
   .game-img {
     height: 240px;
   }
+
+  #podium,
+  #class-section,
+  #client {
+    scroll-margin-top: 300px;
+  }
 }
 
-/* ============================================
-   RESPONSIVE — TABLET LARGE (768px+)
-   ============================================ */
+/* RESPONSIVE — TABLET LARGE (768px+)*/
 @media (min-width: 768px) {
   .hero-content {
     flex-direction: row;
@@ -642,12 +877,32 @@ body {
     width: 200px;
     height: 100px;
   }
+
+  .hamburger-btn {
+    bottom: 36px;
+    right: 36px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .nav-links {
+    max-width: 420px;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 20px 32px;
+  }
+
+  #podium,
+  #class-section,
+  #client {
+    scroll-margin-top: 300px;
+  }
 }
 
-/* ============================================
-   RESPONSIVE — DESKTOP (1024px+)
-   3 cards per row
-   ============================================ */
+/* RESPONSIVE — DESKTOP (1024px+)*/
 @media (min-width: 1024px) {
   .hero-content {
     max-width: 1100px;
@@ -680,7 +935,6 @@ body {
     font-size: 18px;
   }
 
-  /* 3 cards per row on desktop */
   .game-card {
     width: calc(33.333% - 16px);
     max-width: 380px;
@@ -703,11 +957,15 @@ body {
   .logos-track {
     gap: 2rem;
   }
+
+  #podium,
+  #class-section,
+  #client {
+    scroll-margin-top: 40px;
+  }
 }
 
-/* ============================================
-   RESPONSIVE — WIDE DESKTOP (1440px+)
-   ============================================ */
+/* RESPONSIVE — WIDE DESKTOP (1440px+)*/
 @media (min-width: 1440px) {
   .hero-content {
     max-width: 1300px;
@@ -765,5 +1023,11 @@ body {
 
   .logos-track {
     gap: 2.5rem;
+  }
+
+  #podium,
+  #class-section,
+  #client {
+    scroll-margin-top: 40px;
   }
 }

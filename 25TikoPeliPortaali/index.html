@@ -13,6 +13,30 @@
 
 <body>
 
+	<!-- <nav class="top-nav">
+		<span class="nav-brand">25Tiko</span>
+	</nav> -->
+
+	<!-- OVERLAY MENU -->
+	<div class="nav-overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Navigaatiomenu">
+		<span class="overlay-brand">25Tiko</span>
+		<ul class="nav-links">
+			<li>
+				<a href="#class-section">Pelit</a>
+			</li>
+			<li>
+				<a href="#podium">Podium </a>
+			</li>
+			<li>
+				<a href="#client"> Asiakkaat</a>
+			</li>
+			<div class="lang-switcher">
+				<button class="lang-btn active" data-lang="fi">FI</button>
+				<button class="lang-btn" data-lang="en">EN</button>
+			</div>
+		</ul>
+	</div>
+
 	<section class="hero">
 
 		<!-- Dot pattern overlay -->
@@ -24,7 +48,7 @@
 			<div class="hero-text fade-in">
 				<h1 class="hero-title glow">25Tiko</h1>
 				<h1 class="hero-title glow">Peliportaali</h1>
-
+				
 				<p class="hero-sub">25Tikon tekemät pelit :3</p>
 			</div>
 
@@ -40,7 +64,7 @@
 	</section>
 
 	<!-- Games section with buttons -->
-	<section class="Class-Select">
+	<section class="Class-Select" id="class-section">
 		<h2 class="glow">Pelit</h2>
 		<div class="button-wrapper">
 			<div class="hanging-btn">
@@ -59,178 +83,241 @@
 	<section class="game-section" id="section1">
 		<div class="game-card">
 			<img src="Images/soppamies.png" alt="Soppamies" class="game-img">
-			<div class="game-creator">👤 Team Soppamies</div>
+			<div class="game-creator">Tiimi: DREAM TEAM</div>
 			<h3 class="game-name">Soppamies</h3>
-			<p class="game-desc">Soppamies on MUUSA -projektia varten kehitetty arvopohjainen peli, jossa pelaaja löytää itsensä mysteerisestä metsästä. Kaikki väri on kadonnut maailmasta. Kaikki on tasaisen harmaata eikä mikään oikein tunnu miltään. Pelaaja löytää Soppamiehen metsästä, joka antaa hänelle tehtävän sekä lyhdyn. Pelaajan pitää etsiä erilaisia ainesosia ja  värit palautuvat pikku hiljaa takaisin maailmaan. Soppamies keittää sopan hänelle ainesosista ja näin hän löytää taas itsensä.</p>
+			<p class="game-desc">Soppamies on MUUSA -projektia varten kehitetty arvopohjainen peli, jossa pelaaja löytää
+				itsensä mysteerisestä metsästä. Kaikki väri on kadonnut maailmasta. Kaikki on tasaisen harmaata eikä
+				mikään oikein tunnu miltään. Pelaaja löytää Soppamiehen metsästä, joka antaa hänelle tehtävän sekä
+				lyhdyn. Pelaajan pitää etsiä erilaisia ainesosia ja värit palautuvat pikku hiljaa takaisin maailmaan.
+				Soppamies keittää sopan hänelle ainesosista ja näin hän löytää taas itsensä.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko1a/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/vqS1My372Ps" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="TrapMouse" class="game-img">
-			<div class="game-creator">👤 Team TrapMouse</div>
+			<div class="game-creator">Tiimi: Puuhöylä Studios</div>
 			<h3 class="game-name">TrapMouse</h3>
-			<p class="game-desc">Fun puzzle game for everyone.</p>
+			<p class="game-desc">TrapMouse -peli toimii eräänlaisena testinä selvittääkseen onko pelin pelaaja etsijä,
+				etenijä vai edistäjä. Pelissä ohjaat hiirtä (eläin) ja tehtävänä on päästä labyrintista ulos. Tapoja
+				läpäistä labyrintti on kolme, ja tapa millä läpäiset labyrintin kertoo mihin sijoitut tässä
+				etsijä-etenijä-edistäjä-pyramidissa. Labyrintin läpäisyn jälkeen pelaaja vastaa kymmeneen kysymykseen
+				jotka auttavat määrittämään sijoittumisen e-pyramidissa.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko1b/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://www.youtube.com/watch?v=-hW4IPaycJc" target="_blank" class="trailer-btn">▶ Katso
+					traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="Lumo" class="game-img">
-			<div class="game-creator">👤 Team Lumo</div>
+			<div class="game-creator">Tiimi: Kaurapuuro Games</div>
 			<h3 class="game-name">Lumo</h3>
-			<p class="game-desc">Väistele meteoriitteja, kerää tähtipölyä ja vastaa universumin kysymyksiin. Lumo on Muusa-projektia varten kehitetty avaruusseikkailu, joka vaatii sekä nopeita refleksejä että pysähtymistä omien arvojen äärelle. Matkan varrella kohtaat portteja, joiden kohdalla joudut tekemään valintoja joista jokainen ohjaa sinua lähemmäksi lopuksi paljastuvaa Muusa-rooliasi.</p>
+			<p class="game-desc">Väistele meteoriitteja, kerää tähtipölyä ja vastaa universumin kysymyksiin. Lumo on
+				Muusa-projektia varten kehitetty avaruusseikkailu, joka vaatii sekä nopeita refleksejä että pysähtymistä
+				omien arvojen äärelle. Matkan varrella kohtaat portteja, joiden kohdalla joudut tekemään valintoja
+				joista jokainen ohjaa sinua lähemmäksi lopuksi paljastuvaa Muusa-rooliasi.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko1c/lumo/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="Pyramid of Elements" class="game-img">
-			<div class="game-creator">👤 Team Pyramid</div>
+			<div class="game-creator">Tiimi: Phantom</div>
 			<h3 class="game-name">Pyramid of Elements</h3>
-			<p class="game-desc">Pyramid of Elements pelissä kerätään labyrintin sisällä avaimia, joilla avataan lukollisia ovia, joista pääsee pyramidin huipulle. Avaimia suojelevat viholliset ja sinun pitää väistellä niitä. Huoneissa voi olla mentorin esittämiä arvokysymyksiä tai vihollisia. Pelissä päämekaniikka on liikkuminen joystickillä ja boostilla.</p>
+			<p class="game-desc">Pyramid of Elements pelissä kerätään labyrintin sisällä avaimia, joilla avataan
+				lukollisia ovia, joista pääsee pyramidin huipulle. Avaimia suojelevat viholliset ja sinun pitää
+				väistellä niitä. Huoneissa voi olla mentorin esittämiä arvokysymyksiä tai vihollisia. Pelissä
+				päämekaniikka on liikkuminen joystickillä ja boostilla..</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko1e/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://www.youtube.com/watch?v=6M3XAcHhFqc" target="_blank" class="trailer-btn">▶ Katso
+					traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="Fishing Filosofy" class="game-img">
-			<div class="game-creator">👤 Team Fishing Filosofy</div>
+			<div class="game-creator">Tiimi: ArvoKala</div>
 			<h3 class="game-name">Fishing Filosofy</h3>
-			<p class="game-desc">Hauskempi ja mielenkiintoisempi tapa pelaajalle arvioida, mitä arvoja hänellä on. Fishing Filosofy on lyhyt ja ytimekäs kalastuspeli, jossa jokainen kala edustaa arvoa, ja pelaajan on arvioitava, kuinka tärkeitä nämä arvot ovat hänelle yksilönä. Kun peli on loppu ja kaikki kalat on pyydystetty, pelaajalle esitetään arvoprofiili.</p>
+			<p class="game-desc">Hauskempi ja mielenkiintoisempi tapa pelaajalle arvioida, mitä arvoja hänellä on.
+
+				Fishing Filosofy on lyhyt ja ytimekäs kalastuspeli, jossa jokainen kala edustaa arvoa, ja pelaajan on
+				arvioitava, kuinka tärkeitä nämä arvot ovat hänelle yksilönä. Kun peli on loppu ja kaikki kalat on
+				pyydystetty, pelaajalle esitetään arvoprofiili, joka näyttää, mitä arvoja hänellä on. Se on viihtyisä
+				elämys, joka on suunniteltu käytettäväksi työelämässä olevien ja sinne siirtyvien
+				MUUSA-mentorointiohjelmaan osallistuvien työkaluna.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko1g/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
+			<img src="Images/juliste.png" alt="Game One" class="game-img">
+			<div class="game-creator">Tiimi: Catnip Games</div>
+			<h3 class="game-name">Laivakatit Laineilla</h3>
+			<p class="game-desc">Laivakatit laineilla on seikkailupeli, jossa teemana on kissat ja rento tunnelma.
+				Pelissä vastaat kissojen esittämiin kysymyksiin, jotka kartuttavat lopullista
+				pistemäärää joka sitten kertoo lopuksi arvosi. Peli on suunniteltu laajalle
+				pelaajakunnalle, ja kaikki on alusta loppuun itsetehtyä.
+				.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
+			</div>
+		</div>
+		<!-- <div class="game-card">
 			<img src="Images/juliste.png" alt="Game One" class="game-img">
 			<div class="game-creator">👤 Team Name</div>
 			<h3 class="game-name">Game One</h3>
 			<p class="game-desc">Fun puzzle game for everyone.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="#" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
-		</div>
-		<div class="game-card">
-			<img src="Images/juliste.png" alt="Game One" class="game-img">
-			<div class="game-creator">👤 Team Name</div>
-			<h3 class="game-name">Game One</h3>
-			<p class="game-desc">Fun puzzle game for everyone.</p>
-			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
-			</div>
-		</div>
+		</div> -->
 	</section>
 
 	<!-- Tiko2 game containers -->
 	<section class="game-section" id="section2">
 		<div class="game-card">
-			<img src="Images/juliste.png" alt="Kokataan yhdessä" class="game-img">
-			<div class="game-creator">👤 Team Kokataan</div>
+			<img src="Images/PorkkanaGames.png" alt="Kokataan yhdessä" class="game-img">
+			<div class="game-creator">Tiimi: PorkkanaGames</div>
 			<h3 class="game-name">Kokataan yhdessä</h3>
-			<p class="game-desc">"Kokataan yhdessä" on yhteistyöhön kannustava kahden pelaajan kokkauspeli, jossa voit oppia kokkauksen ja kommunikaation perusteita rauhallisessa ympäristössä. Valitkaa resepti, työskennelkää yhdessä ja nauttikaa pelistä omassa tahdissanne. Ei rangaistuksia tai aikarajoitteita.</p>
+			<p class="game-desc">"Kokataan yhdessä" on yhteistyöhön kannustava kahden pelaajan kokkauspeli, jossa voit
+				oppia kokkauksen ja kommunikaation perusteita rauhallisessa ympäristössä. Valitkaa resepti,
+				työskennelkää yhdessä ja nauttikaa pelistä omassa tahdissanne. Ei rangaistuksia tai aikarajoitteita.
+				Pelin tavoite on yksinkertainen: opi ja pidä hauskaa. Tämä on kokkauspeli kaikille!</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2a/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/kAQnfmVzy30" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/Hooked.png" alt="Hooked!" class="game-img">
-			<div class="game-creator">👤 Team Hooked</div>
+			<div class="game-creator">Tiimi: Kissanpennut</div>
 			<h3 class="game-name">Hooked!</h3>
-			<p class="game-desc">Jätä kiireinen kaupunki taaksesi ja mene tapaamaan isoisäkissaasi hänen mökillensä, luvassa on hauska ja jännittävä kalastusreissu! Hooked! on peli joka testaa käyttäjän refleksejä kaloilla jotka yrittävät karata, mutta ole varuillasi!</p>
+			<p class="game-desc">Jätä kiireinen kaupunki taaksesi ja mene tapaamaan isoisäkissaasi hänen mökillensä,
+				luvassa on hauska ja jännittävä kalastusreissu! Hooked! on peli joka testaa käyttäjän refleksejä
+				kaloilla jotka yrittävät karata, mutta ole varuillasi! Paikalliset ovat huomanneet järveen heitettyjen
+				roskien määrän kasvaneen! Yritä pitää kalat turvassa roskilta samalla kun väistelet niitä itsekin! Jää
+				koukkuun!</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2b/Hooked.html" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/QqGYzSniPKA" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="Pajatro" class="game-img">
-			<div class="game-creator">👤 Team Pajatro</div>
+			<div class="game-creator">Tiimi: Setto</div>
 			<h3 class="game-name">Pajatro</h3>
-			<p class="game-desc">Exciting platformer experience.</p>
+			<p class="game-desc">Haasta itseäsi tässä klassikon modernissa paluussa!
+				Pajatro on peli, jossa yrität tähdätä pelilaudan tiettyihin osioihin rajallisella määrällä poletteja
+				kerätäksesi pisteitä.
+				Päästäksesi seuraavalle tasolle sinun on ajateltava strategisesti, sillä jokainen liike riippuu sinusta.
+				Luo oma pelityylisi valitsemalla laajasta arsenaalista erilaisia lisävoimia ja etene nopeammin tasojen
+				läpi tässä roguelike arcadepelissä.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2c/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/xOsHTjGAWMQ?si=x-iT5uhDHCf-NzdH" target="_blank" class="trailer-btn">▶ Katso
+					traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/memotap_ikoni.png" alt="MemoTap" class="game-img">
-			<div class="game-creator">👤 Team MemoTap</div>
+			<div class="game-creator">Tiimi: T4</div>
 			<h3 class="game-name">MemoTap</h3>
-			<p class="game-desc">Muistipeli, jonka pelikierre on yksinkertainen ja toistokelpoinen; valot syttyvät järjestyksessä yksi kerrallaan, ja pelaajan pitää valojen sytyttyä muistaa ja toistaa kuvio. Peli toimii mukavana lyhytmuotoisena ajanvietteenä julkiselle laitteelle.</p>
+			<p class="game-desc"> Peli näyttää sinulle vihreillä valoilla näppäinten oikean järjestyksen. Kun on sinun
+				vuorosi, muistatko järjestyksen?
+
+				Jos painat väärin, nappi välähtää punaisena ja muistisi joutuu koetukselle. Elämäsydämet kertovat,
+				montako yritystä sinulla on vielä jäljellä. Kun sydämet loppuvat, pääset yrittämään uudelleen
+				edellisestä tasosta.
+
+				Memotapin tavoite on yksinkertainen: harjoita muistiasi, haasta itsesi ja palaa pelaamaan yhä uudelleen.
+			</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2d/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/atp9VFMGFOc?si=uKr6Weq4lXLV3KoL" target="_blank" class="trailer-btn">▶ Katso
+					traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/Puhku.png" alt="Puhku" class="game-img">
-			<div class="game-creator">👤 Team Puhku</div>
+			<div class="game-creator">Tiimi: AIJMO</div>
 			<h3 class="game-name">Puhku</h3>
-			<p class="game-desc">Puhku on opettavainen videopeli, joka on pelattavissa Android-laitteilla. Peli on suunnattu lapsille ja sen tavoitteena on opettaa sanojen muodostamista, motorisia taitoja ja aakkosia.</p>
+			<p class="game-desc">Puhku on opettavainen videopeli, joka on pelattavissa Android-laitteilla. Peli on
+				suunnattu lapsille ja sen tavoitteena on opettaa sanojen muodostamista, motorisia taitoja ja aakkosia.
+			</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2e/" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="Tähtää ja opi" class="game-img">
-			<div class="game-creator">👤 Team Tähtää ja opi</div>
+			<div class="game-creator">Tiimi: KotKot Games</div>
 			<h3 class="game-name">Tähtää ja opi</h3>
-			<p class="game-desc">Tähtää ja opi on oppimispeli, jossa ideana on ratkaista laskutoimistus ja osua oikean vastauksen sisältämään maalitauluun heittämällä sitä hernepussilla. Peli soveltuu erilaisille kohderyhmille: lapsille matematiikan opiskeluun, erityisryhmille käsi-katse koordinaation harjoittamiseen.</p>
+			<p class="game-desc">Tähtää ja Opi on lapsille suunnattu oppimispeli, jossa ideana on ratkaista ruudulle
+				ilmestyvä laskutoimitus ja osua oikean vastauksen sisältämään maalitauluun. Peli opettaa matematiikkaa,
+				sekä tukee toiminnallisuutta ja koordinaatiokykyä.
+			</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2f/index.HTML" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/AlienAdrift.png" alt="Alien Adrift" class="game-img">
-			<div class="game-creator">👤 Team Alien Adrift</div>
+			<div class="game-creator">Tiimi: GlowStar</div>
 			<h3 class="game-name">Alien Adrift</h3>
-			<p class="game-desc">Alien Adrift on fysiikkaan perustuva kosketusnäytöllinen peli, jossa et ohjaa avaruusolentoasi vaan kaikkea hänen ympärillään. Lennätä pienet asteroidit pois tieltä, vedä isot painovoiman avulla sivuun, murskaa planeetat kerätäksesi lisäelämiä.</p>
+			<p class="game-desc">Alien Adrift on fysiikkaan perustuva kosketusnäytöllinen peli, jossa et ohjaa
+				avaruusolentoasi vaan kaikkea hänen ympärillään. Lennätä pienet asteroidit pois tieltä, vedä isot
+				painovoiman avulla sivuun, murskaa planeetat kerätäksesi lisäelämiä ja pidä Orlop aisoissa ennen kuin se
+				aiheuttaa vahinkoa. Mitä kauemmin pidät kaaoksen hallinnassa, sitä enemmän pisteitä keräät!</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2g/AlienAdrift_FI.html" target="_blank"
+					class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/p-qoU-QZIm8" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 		<div class="game-card">
 			<img src="Images/juliste.png" alt="Holy Carp, Aliens" class="game-img">
-			<div class="game-creator">👤 Team Holy Carp</div>
+			<div class="game-creator">Tiimi: BrineWorks</div>
 			<h3 class="game-name">Holy Carp, Aliens</h3>
-			<p class="game-desc">Etsit vaihtelua elämääsi ja ostat epäilyttävän halvan akvaariokaupan. Pian selviää, miksi kauppa oli niin halpa: tämä rakennus on jatkuvien öisten avaruusoliohyökkäysten kohteena. Yöllä puolustat akvaarioitasi muukalaisilta ja suojelet kalojasi ampumalla avaruusolioita laser blasterilla.</p>
+			<p class="game-desc">Etsit vaihtelua elämääsi ja ostat epäilyttävän halvan akvaariokaupan laiturin varrelta
+				omituiselta, foliohattuun pukeutuvalta vuokranantajalta. Pian selviää, miksi kauppa oli niin halpa: tämä
+				rakennus on jatkuvien öisten avaruusoliohyökkäysten kohteena.
+				Kauppiaana vietät päiväsi keräten ja ostaen uusia kaloja sekä päivittäen ja ylläpitäen akvaarioitasi.
+				Yöllä puolustat akvaarioitasi muukalaisilta ja suojelet kalojasi ampumalla avaruusolioita laser
+				blasterilla. Peli hyödyntää YETI-tabletin iskunkestävää kosketusnäyttöä, joten voit mätkiä
+				avaruusolioita millä tahansa esineellä.</p>
 			<div class="game-buttons">
-				<a href="#" target="_blank" class="team-btn">Team Website</a>
-				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
-				<a href="#" download class="download-btn">Download APK</a>
+				<a href="https://webpages.tuni.fi/25tiko2h/fi.html" target="_blank" class="team-btn">Kotisivut</a>
+				<a href="https://youtu.be/NzNXmEzQhBc" target="_blank" class="trailer-btn">▶ Katso traileri</a>
+				<a href="#" download class="download-btn">Lataa tästä!</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- Winner Podium Section -->
 	<section class="podium-section">
-		<h2 class="podium-title" id="podium">🏆 Winners 🏆</h2>
+		<h2 class="podium-title" id="podium">🏆 Voittajat 🏆</h2>
 		<div class="podium-wrapper">
 			<!-- 2nd Place -->
 			<div class="podium-card second">
@@ -256,7 +343,7 @@
 	</section>
 
 	<!-- Scrolling logo strip -->
-	<section class="clients-section">
+	<section class="clients-section" id="client">
 		<div class="logos-track-wrap">
 			<div class="logos-track">
 
@@ -320,6 +407,12 @@
 	<footer class="footer">
 		<p>25Tiko Peliportaali · 2025</p>
 	</footer>
+
+	<button class="hamburger-btn" id="hamburgerBtn" aria-label="Avaa menu" aria-expanded="false">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</button>
 
 </body>
 
