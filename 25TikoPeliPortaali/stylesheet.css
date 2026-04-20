@@ -1,0 +1,769 @@
+/*  RESET  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
+  background: #f4f4f8;
+}
+
+/*  HERO  */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: #3c287f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+  background-size: 60px 60px, 30px 30px;
+  background-position: 0 0, 15px 15px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 500px;
+  padding: 40px 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.hero-sub {
+  font-size: 0.95rem;
+  color: rgba(196, 181, 253, 0.85);
+  line-height: 1.5;
+}
+
+.glow {
+  text-shadow:
+    0 0 4px #6a0000,
+    0 0 20px #d0aaff,
+    0 0 6px #a64dff;
+}
+
+.hero-poster {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.poster-frame {
+  border-radius: 16px;
+  border: 3px solid rgba(196, 181, 253, 0.5);
+  box-shadow:
+    0 0 40px rgba(167, 139, 250, 0.35),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: floatPoster 6s ease-in-out infinite;
+}
+
+.poster-frame img {
+  width: 100%;
+  display: block;
+}
+
+@keyframes floatPoster {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+/*  FADE-IN  */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+.fade-in:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  CLASS SELECT  */
+.Class-Select {
+  background: transparent;
+  padding: 0 20px 60px;
+  position: relative;
+}
+
+.Class-Select h2 {
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #3c287f;
+  padding-top: 40px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding-top: 200px;
+}
+
+/* Hanging buttons */
+.hanging-btn {
+  position: relative;
+}
+
+.hanging-btn::before,
+.hanging-btn::after {
+  content: "";
+  position: absolute;
+  top: -160px;
+  width: 4px;
+  height: 160px;
+  z-index: 2;
+  background: repeating-linear-gradient(45deg,
+      #8b5a2b, #8b5a2b 4px,
+      #a47148 4px, #a47148 8px);
+  border-radius: 2px;
+}
+
+.hanging-btn::before {
+  left: 42px;
+}
+
+.hanging-btn::after {
+  right: 42px;
+}
+
+.hanging-btn button::before,
+.hanging-btn button::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  width: 8px;
+  height: 8px;
+  background: #444;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hanging-btn button::before {
+  left: 40px;
+}
+
+.hanging-btn button::after {
+  right: 40px;
+}
+
+.hanging-btn button {
+  position: relative;
+  width: 200px;
+  background: #8a6fe1;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hanging-btn span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ============================================
+   GAME SECTION — mobile-first grid
+   1 col → 2 col (640 px+) → 3 col (1024 px+)
+   ============================================ */
+.game-section {
+  background: #efecec;
+  /* Hidden by default; JS sets display:flex to reveal */
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 16px 60px;
+}
+
+/* ---- GAME CARD ---- */
+.game-card {
+  background: #1e1b2f;
+  border-radius: 18px;
+  /* Mobile: full width, one per row */
+  width: 100%;
+  max-width: 100%;
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Game poster image */
+.game-img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #0d0b1a;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Creator tag */
+.game-creator {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(196, 181, 253, 0.75);
+  background: rgba(166, 77, 255, 0.15);
+  border: 1px solid rgba(166, 77, 255, 0.3);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
+}
+
+.game-name {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: #a64dff;
+  text-shadow: 0 0 6px #d0aaff;
+}
+
+.game-desc {
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  color: #ccc;
+  line-height: 1.55;
+  /* Push buttons to bottom of card */
+  flex: 1;
+}
+
+.game-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+/* ---- BUTTONS ---- */
+.trailer-btn,
+.team-btn,
+.download-btn {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  transition: background 0.25s, transform 0.15s;
+  display: block;
+  text-align: center;
+}
+
+.trailer-btn {
+  background: #e53e3e;
+  letter-spacing: 0.02em;
+}
+
+.trailer-btn:hover {
+  background: #c53030;
+  transform: scale(1.03);
+}
+
+.team-btn {
+  background: #4f46e5;
+}
+
+.team-btn:hover {
+  background: #3730a3;
+}
+
+.download-btn {
+  background: #10b981;
+}
+
+.download-btn:hover {
+  background: #047857;
+}
+
+/* ============================================
+   WINNER PODIUM
+   ============================================ */
+.podium-section {
+  background: #3c287f;
+  color: white;
+  padding: 60px 10px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  margin-top: 300px;
+}
+
+.podium-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 60px;
+  margin-bottom: 120px;
+  text-shadow: 0 0 10px #d0aaff;
+}
+
+.podium-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 80px;
+}
+
+.podium-card {
+  border-radius: 0;
+  flex: 1;
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 4px 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.podium-card:hover {
+  transform: translateY(-8px);
+}
+
+.podium-card::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.first {
+  height: 160px;
+  background: #a64dff;
+}
+
+.second {
+  height: 120px;
+  background: #8b5aef;
+}
+
+.third {
+  height: 90px;
+  background: #7c3aed;
+}
+
+.first::before {
+  border-bottom: 16px solid #a64dff;
+}
+
+.second::before {
+  border-bottom: 16px solid #8b5aef;
+}
+
+.third::before {
+  border-bottom: 16px solid #7c3aed;
+}
+
+.podium-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2d1b69;
+}
+
+.podium-card .emoji {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.podium-card .game-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  word-break: break-word;
+}
+
+/* ============================================
+   CLIENTS / SPONSORS
+   ============================================ */
+.clients-section {
+  background: #f8fafc;
+  padding: 5rem 1.5rem 4.5rem;
+  overflow: hidden;
+}
+
+.logos-track-wrap {
+  position: relative;
+  overflow: hidden;
+  margin-top: 150px;
+  mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+.logos-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.logos-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-card {
+  flex-shrink: 0;
+  width: 160px;
+  height: 90px;
+  background: white;
+  border-radius: 12px;
+  border: 1.5px solid rgba(167, 139, 250, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.logo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(109, 40, 217, 0.12);
+}
+
+.logo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.logo-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 0.04em;
+}
+
+.logo-card img {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  filter: grayscale(40%);
+  opacity: 0.8;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.logo-card:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: #0f0520;
+  color: rgba(196, 181, 253, 0.6);
+  text-align: center;
+  margin-top: 150px;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================
+   RESPONSIVE — TABLET (640px+)
+   2 cards per row
+   ============================================ */
+@media (min-width: 640px) {
+  .game-card {
+    width: calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+
+  .game-img {
+    height: 240px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — TABLET LARGE (768px+)
+   ============================================ */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 900px;
+    gap: 60px;
+    padding: 60px 40px;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-poster {
+    flex: 0 0 auto;
+    width: 320px;
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-sub {
+    font-size: 18px;
+  }
+
+  .button-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+    padding-top: 220px;
+  }
+
+  .hanging-btn::before,
+  .hanging-btn::after {
+    top: -220px;
+    height: 220px;
+  }
+
+  .hanging-btn button {
+    width: 220px;
+    padding: 18px;
+    font-size: 16px;
+  }
+
+  .podium-card {
+    max-width: 160px;
+    padding: 10px 8px 20px;
+  }
+
+  .first {
+    height: 200px;
+  }
+
+  .second {
+    height: 160px;
+  }
+
+  .third {
+    height: 120px;
+  }
+
+  .podium-icon {
+    width: 72px;
+    height: 72px;
+    top: -84px;
+  }
+
+  .podium-card .game-name {
+    font-size: 0.95rem;
+  }
+
+  .logo-card {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — DESKTOP (1024px+)
+   3 cards per row
+   ============================================ */
+@media (min-width: 1024px) {
+  .hero-content {
+    max-width: 1100px;
+    gap: 80px;
+  }
+
+  .hero-title {
+    font-size: 90px;
+  }
+
+  .hero-poster {
+    width: 380px;
+    max-width: 380px;
+  }
+
+  .button-wrapper {
+    gap: 80px;
+    padding-top: 240px;
+  }
+
+  .hanging-btn::before,
+  .hanging-btn::after {
+    top: -240px;
+    height: 240px;
+  }
+
+  .hanging-btn button {
+    width: 240px;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  /* 3 cards per row on desktop */
+  .game-card {
+    width: calc(33.333% - 16px);
+    max-width: 380px;
+  }
+
+  .game-img {
+    height: 260px;
+  }
+
+  .podium-card {
+    width: 120px;
+    font-size: 1rem;
+  }
+
+  .logo-card {
+    width: 240px;
+    height: 110px;
+  }
+
+  .logos-track {
+    gap: 2rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE — WIDE DESKTOP (1440px+)
+   ============================================ */
+@media (min-width: 1440px) {
+  .hero-content {
+    max-width: 1300px;
+    gap: 100px;
+  }
+
+  .hero-title {
+    font-size: 120px;
+  }
+
+  .hero-poster {
+    width: 500px;
+    max-width: 500px;
+  }
+
+  .button-wrapper {
+    gap: 100px;
+    padding-top: 260px;
+  }
+
+  .hanging-btn::before,
+  .hanging-btn::after {
+    top: -260px;
+    height: 260px;
+  }
+
+  .hanging-btn button {
+    width: 260px;
+    padding: 22px;
+    font-size: 20px;
+  }
+
+  .game-section {
+    gap: 30px;
+  }
+
+  .game-card {
+    width: calc(33.333% - 20px);
+    max-width: 420px;
+  }
+
+  .game-img {
+    height: 280px;
+  }
+
+  .podium-card {
+    width: 140px;
+    font-size: 1.1rem;
+  }
+
+  .logo-card {
+    width: 280px;
+    height: 120px;
+  }
+
+  .logos-track {
+    gap: 2.5rem;
+  }
+}

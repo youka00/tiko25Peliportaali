@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>25Tiko Peliportaali</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap">
+	<script src="script.js"></script>
+</head>
+
+<body>
+
+	<section class="hero">
+
+		<!-- Dot pattern overlay -->
+		<div class="hero-dots"></div>
+
+		<div class="hero-content">
+
+			<!-- Left side text -->
+			<div class="hero-text fade-in">
+				<h1 class="hero-title glow">25Tiko</h1>
+				<h1 class="hero-title glow">Peliportaali</h1>
+
+				<p class="hero-sub">25Tikon tekemät pelit :3</p>
+			</div>
+
+			<!-- Right side poster -->
+			<div class="hero-poster fade-in">
+				<div class="poster-frame">
+					<img src="Images/juliste.png" alt="Juliste">
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- Games section with buttons -->
+	<section class="Class-Select">
+		<h2 class="glow">Pelit</h2>
+		<div class="button-wrapper">
+			<div class="hanging-btn">
+				<button id="btn1">Tiko1<br><span>Muusa</span></button>
+			</div>
+
+			<div class="hanging-btn">
+				<button id="btn2">Tiko2<br><span>WellTech Lab</span></button>
+			</div>
+
+		</div>
+
+	</section>
+
+	<!-- Tiko1 game containers -->
+	<section class="game-section" id="section1">
+		<div class="game-card">
+			<img src="Images/soppamies.png" alt="Soppamies" class="game-img">
+			<div class="game-creator">👤 Team Soppamies</div>
+			<h3 class="game-name">Soppamies</h3>
+			<p class="game-desc">Soppamies on MUUSA -projektia varten kehitetty arvopohjainen peli, jossa pelaaja löytää itsensä mysteerisestä metsästä. Kaikki väri on kadonnut maailmasta. Kaikki on tasaisen harmaata eikä mikään oikein tunnu miltään. Pelaaja löytää Soppamiehen metsästä, joka antaa hänelle tehtävän sekä lyhdyn. Pelaajan pitää etsiä erilaisia ainesosia ja  värit palautuvat pikku hiljaa takaisin maailmaan. Soppamies keittää sopan hänelle ainesosista ja näin hän löytää taas itsensä.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="TrapMouse" class="game-img">
+			<div class="game-creator">👤 Team TrapMouse</div>
+			<h3 class="game-name">TrapMouse</h3>
+			<p class="game-desc">Fun puzzle game for everyone.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Lumo" class="game-img">
+			<div class="game-creator">👤 Team Lumo</div>
+			<h3 class="game-name">Lumo</h3>
+			<p class="game-desc">Väistele meteoriitteja, kerää tähtipölyä ja vastaa universumin kysymyksiin. Lumo on Muusa-projektia varten kehitetty avaruusseikkailu, joka vaatii sekä nopeita refleksejä että pysähtymistä omien arvojen äärelle. Matkan varrella kohtaat portteja, joiden kohdalla joudut tekemään valintoja joista jokainen ohjaa sinua lähemmäksi lopuksi paljastuvaa Muusa-rooliasi.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Pyramid of Elements" class="game-img">
+			<div class="game-creator">👤 Team Pyramid</div>
+			<h3 class="game-name">Pyramid of Elements</h3>
+			<p class="game-desc">Pyramid of Elements pelissä kerätään labyrintin sisällä avaimia, joilla avataan lukollisia ovia, joista pääsee pyramidin huipulle. Avaimia suojelevat viholliset ja sinun pitää väistellä niitä. Huoneissa voi olla mentorin esittämiä arvokysymyksiä tai vihollisia. Pelissä päämekaniikka on liikkuminen joystickillä ja boostilla.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Fishing Filosofy" class="game-img">
+			<div class="game-creator">👤 Team Fishing Filosofy</div>
+			<h3 class="game-name">Fishing Filosofy</h3>
+			<p class="game-desc">Hauskempi ja mielenkiintoisempi tapa pelaajalle arvioida, mitä arvoja hänellä on. Fishing Filosofy on lyhyt ja ytimekäs kalastuspeli, jossa jokainen kala edustaa arvoa, ja pelaajan on arvioitava, kuinka tärkeitä nämä arvot ovat hänelle yksilönä. Kun peli on loppu ja kaikki kalat on pyydystetty, pelaajalle esitetään arvoprofiili.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Game One" class="game-img">
+			<div class="game-creator">👤 Team Name</div>
+			<h3 class="game-name">Game One</h3>
+			<p class="game-desc">Fun puzzle game for everyone.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Game One" class="game-img">
+			<div class="game-creator">👤 Team Name</div>
+			<h3 class="game-name">Game One</h3>
+			<p class="game-desc">Fun puzzle game for everyone.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Tiko2 game containers -->
+	<section class="game-section" id="section2">
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Kokataan yhdessä" class="game-img">
+			<div class="game-creator">👤 Team Kokataan</div>
+			<h3 class="game-name">Kokataan yhdessä</h3>
+			<p class="game-desc">"Kokataan yhdessä" on yhteistyöhön kannustava kahden pelaajan kokkauspeli, jossa voit oppia kokkauksen ja kommunikaation perusteita rauhallisessa ympäristössä. Valitkaa resepti, työskennelkää yhdessä ja nauttikaa pelistä omassa tahdissanne. Ei rangaistuksia tai aikarajoitteita.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/Hooked.png" alt="Hooked!" class="game-img">
+			<div class="game-creator">👤 Team Hooked</div>
+			<h3 class="game-name">Hooked!</h3>
+			<p class="game-desc">Jätä kiireinen kaupunki taaksesi ja mene tapaamaan isoisäkissaasi hänen mökillensä, luvassa on hauska ja jännittävä kalastusreissu! Hooked! on peli joka testaa käyttäjän refleksejä kaloilla jotka yrittävät karata, mutta ole varuillasi!</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Pajatro" class="game-img">
+			<div class="game-creator">👤 Team Pajatro</div>
+			<h3 class="game-name">Pajatro</h3>
+			<p class="game-desc">Exciting platformer experience.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/memotap_ikoni.png" alt="MemoTap" class="game-img">
+			<div class="game-creator">👤 Team MemoTap</div>
+			<h3 class="game-name">MemoTap</h3>
+			<p class="game-desc">Muistipeli, jonka pelikierre on yksinkertainen ja toistokelpoinen; valot syttyvät järjestyksessä yksi kerrallaan, ja pelaajan pitää valojen sytyttyä muistaa ja toistaa kuvio. Peli toimii mukavana lyhytmuotoisena ajanvietteenä julkiselle laitteelle.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/Puhku.png" alt="Puhku" class="game-img">
+			<div class="game-creator">👤 Team Puhku</div>
+			<h3 class="game-name">Puhku</h3>
+			<p class="game-desc">Puhku on opettavainen videopeli, joka on pelattavissa Android-laitteilla. Peli on suunnattu lapsille ja sen tavoitteena on opettaa sanojen muodostamista, motorisia taitoja ja aakkosia.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Tähtää ja opi" class="game-img">
+			<div class="game-creator">👤 Team Tähtää ja opi</div>
+			<h3 class="game-name">Tähtää ja opi</h3>
+			<p class="game-desc">Tähtää ja opi on oppimispeli, jossa ideana on ratkaista laskutoimistus ja osua oikean vastauksen sisältämään maalitauluun heittämällä sitä hernepussilla. Peli soveltuu erilaisille kohderyhmille: lapsille matematiikan opiskeluun, erityisryhmille käsi-katse koordinaation harjoittamiseen.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/AlienAdrift.png" alt="Alien Adrift" class="game-img">
+			<div class="game-creator">👤 Team Alien Adrift</div>
+			<h3 class="game-name">Alien Adrift</h3>
+			<p class="game-desc">Alien Adrift on fysiikkaan perustuva kosketusnäytöllinen peli, jossa et ohjaa avaruusolentoasi vaan kaikkea hänen ympärillään. Lennätä pienet asteroidit pois tieltä, vedä isot painovoiman avulla sivuun, murskaa planeetat kerätäksesi lisäelämiä.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+		<div class="game-card">
+			<img src="Images/juliste.png" alt="Holy Carp, Aliens" class="game-img">
+			<div class="game-creator">👤 Team Holy Carp</div>
+			<h3 class="game-name">Holy Carp, Aliens</h3>
+			<p class="game-desc">Etsit vaihtelua elämääsi ja ostat epäilyttävän halvan akvaariokaupan. Pian selviää, miksi kauppa oli niin halpa: tämä rakennus on jatkuvien öisten avaruusoliohyökkäysten kohteena. Yöllä puolustat akvaarioitasi muukalaisilta ja suojelet kalojasi ampumalla avaruusolioita laser blasterilla.</p>
+			<div class="game-buttons">
+				<a href="#" target="_blank" class="team-btn">Team Website</a>
+				<a href="#" target="_blank" class="trailer-btn">▶ Watch Trailer</a>
+				<a href="#" download class="download-btn">Download APK</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Winner Podium Section -->
+	<section class="podium-section">
+		<h2 class="podium-title" id="podium">🏆 Winners 🏆</h2>
+		<div class="podium-wrapper">
+			<!-- 2nd Place -->
+			<div class="podium-card second">
+				<img src="Images/juliste.png" alt="winner icon" class="podium-icon">
+				<span class="emoji">🥈</span>
+				<h3 class="game-name">Coming soon..</h3>
+			</div>
+
+			<!-- 1st Place -->
+			<div class="podium-card first">
+				<img src="Images/juliste.png" alt="winner icon" class="podium-icon">
+				<span class="emoji">🥇</span>
+				<h3 class="game-name">Coming soon..</h3>
+			</div>
+
+			<!-- 3rd Place -->
+			<div class="podium-card third">
+				<img src="Images/juliste.png" alt="winner icon" class="podium-icon">
+				<span class="emoji">🥉</span>
+				<h3 class="game-name">Coming soon..</h3>
+			</div>
+		</div>
+	</section>
+
+	<!-- Scrolling logo strip -->
+	<section class="clients-section">
+		<div class="logos-track-wrap">
+			<div class="logos-track">
+
+				<div class="logo-card">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 1</span>
+					</div>
+				</div>
+				<div class="logo-card">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 2</span>
+					</div>
+				</div>
+				<div class="logo-card">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 3</span>
+					</div>
+				</div>
+				<div class="logo-card">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 4</span>
+					</div>
+				</div>
+				<div class="logo-card">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 5</span>
+					</div>
+				</div>
+
+				<!-- Duplicate set for seamless loop -->
+				<div class="logo-card" aria-hidden="true">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 1</span>
+					</div>
+				</div>
+				<div class="logo-card" aria-hidden="true">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 2</span>
+					</div>
+				</div>
+				<div class="logo-card" aria-hidden="true">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 3</span>
+					</div>
+				</div>
+				<div class="logo-card" aria-hidden="true">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 4</span>
+					</div>
+				</div>
+				<div class="logo-card" aria-hidden="true">
+					<div class="logo-placeholder">
+						<span class="logo-name">Asiakas 5</span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<p>25Tiko Peliportaali · 2025</p>
+	</footer>
+
+</body>
+
+</html>
