@@ -13,7 +13,7 @@ body {
 }
 
 /* TOP NAV BAR*/
-.top-nav {
+/* .top-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +27,7 @@ body {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(196, 181, 253, 0.15);
-}
+} */
 
 .nav-brand {
   font-family: 'Fredoka One', cursive;
@@ -53,15 +53,15 @@ body {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.35s ease;
+  will-change: opacity;
+  transform: translateZ(0);
 }
 
 .nav-overlay::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 5, 32, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(15, 5, 32, 0.97);
   z-index: -1;
 }
 
@@ -312,6 +312,7 @@ body {
   max-width: 300px;
   margin: 0 auto;
 }
+
 .hero-sub {
   font-size: 0.95rem;
   color: rgba(196, 181, 253, 0.85);
@@ -443,7 +444,8 @@ body {
 .hanging-btn button {
   position: relative;
   width: 200px;
-  background: #8a6fe1;
+  background: #6043c1;
+  background-image: linear-gradient(to bottom right, #6043c1, #471467);
   color: white;
   border: none;
   padding: 16px;
@@ -452,6 +454,7 @@ body {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
 }
 
 .hanging-btn span {
@@ -462,12 +465,20 @@ body {
 /* GAME SECTION*/
 .game-section {
   background: #efecec;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
+  padding: 0 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.game-section.open {
+  max-height: 9999px;
   padding: 40px 16px 60px;
 }
+
 
 /* GAME CARD */
 .game-card {
@@ -516,12 +527,13 @@ body {
 .game-name {
   font-size: 1.15rem;
   margin-bottom: 8px;
-  color: #a64dff;
+  color: #ffffff;
   text-shadow: 0 0 6px #d0aaff;
 }
 
 .game-desc {
   font-size: 0.9rem;
+  font-weight: bold;
   margin-bottom: 14px;
   color: #ccc;
   line-height: 1.55;

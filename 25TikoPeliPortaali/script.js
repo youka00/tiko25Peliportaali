@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             downloadBtn: 'Lataa tästä!',
             footerText: '25Tiko Peliportaali · 2025',
             podiumtittle: '🏆 Voittajat 🏆',
+            gamecreator: 'Tiimi',
             gameDescs: [
                 // tiko1
                 'Soppamies on MUUSA -projektia varten kehitetty arvopohjainen peli, jossa pelaaja löytää itsensä mysteerisestä metsästä. Kaikki väri on kadonnut maailmasta. Kaikki on tasaisen harmaata eikä mikään oikein tunnu miltään. Pelaaja löytää Soppamiehen metsästä, joka antaa hänelle tehtävän sekä lyhdyn. Pelaajan pitää etsiä erilaisia ainesosia ja  värit palautuvat pikku hiljaa takaisin maailmaan. Soppamies keittää sopan hänelle ainesosista ja näin hän löytää taas itsensä.',
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             downloadBtn: 'Download here!',
             footerText: '25Tiko Game Portal · 2025',
             podiumtittle: '🏆 Winners 🏆',
+            gamecreator: 'Team',
             gameDescs: [
                 // tiko1
                 'Soppamies is a value-based game developed for the MUSE project, where the player finds themselves in a mysterious forest. All color has disappeared from the world. Everything is a uniform gray, and nothing really feels like anything.In the forest, the player encounters Soppamies, who gives them a task as well as a lantern. The player must search for different ingredients, and little by little, colors begin to return to the world.Soppamies then cooks a soup from the gathered ingredients, and through this, the player is able to rediscover themselves.',
@@ -82,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // game tittles
         const gamesTitle = document.querySelector('.Class-Select h2');
         if (gamesTitle) gamesTitle.textContent = t.gamesTitle;
+        const gamecreator = document.querySelector('.game-creator');
+        if (gamecreator) gamecreator.textContent = t.gamecreator;
 
         // game cardsw
         const gameCards = document.querySelectorAll('.game-card');
@@ -118,20 +122,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     const btn1 = document.getElementById("btn1");
     const btn2 = document.getElementById("btn2");
-
     const section1 = document.getElementById("section1");
     const section2 = document.getElementById("section2");
 
     btn1.addEventListener("click", () => {
-        const isOpen = section1.style.display === "flex";
-        section1.style.display = isOpen ? "none" : "flex";
-        section2.style.display = "none";
+        const isOpen = section1.classList.contains("open");
+        section1.classList.toggle("open", !isOpen);
+        section2.classList.remove("open");
     });
 
     btn2.addEventListener("click", () => {
-        const isOpen = section2.style.display === "flex";
-        section2.style.display = isOpen ? "none" : "flex";
-        section1.style.display = "none";
+        const isOpen = section2.classList.contains("open");
+        section2.classList.toggle("open", !isOpen);
+        section1.classList.remove("open");
     });
 
     // CONFETTI ON PODIUM SCROLL
