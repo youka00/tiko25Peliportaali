@@ -630,9 +630,9 @@ body {
   position: relative;
 }
 
-.podium-card:hover {
+/* .podium-card:hover {
   transform: translateY(-8px);
-}
+} */
 
 .podium-card::before {
   content: "";

@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // CONFETTI ON PODIUM SCROLL
     function launchConfetti() {
         const colors = ['#a64dff', '#ff6fd8', '#ffe44d', '#4dffb4', '#4da6ff', '#ff4d4d'];
-        for (let i = 0; i < 120; i++) {
+        for (let i = 0; i < 140; i++) {
             const piece = document.createElement('div');
             piece.style.cssText = `
                 position: fixed;
@@ -181,7 +181,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 launchConfetti();
             }
         });
-    }, { threshold: 0.3 });
+    }, {
+        threshold: 0.3,
+        rootMargin: "-35% 0px -35% 0px"
+    });
 
     observer.observe(podium);
 
