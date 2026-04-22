@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
             gamesTitle: 'Pelit',
             websiteBtn: 'Kotisivut',
             trailerBtn: '▶ Katso traileri',
-            downloadBtn: 'Lataa tästä!',
-            footerText: '25Tiko Peliportaali · 2025',
+            // downloadBtn: 'Lataa tästä!',
+            footerText: '© 2026 Tiko portaali, kaikki oikeudet pidätetään.',
             podiumtittle: '🏆 Voittajat 🏆',
             gamecreator: 'Tiimi',
             gameDescs: [
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 'Pyramid of Elements pelissä kerätään labyrintin sisällä avaimia, joilla avataan lukollisia ovia, joista pääsee pyramidin huipulle. Avaimia suojelevat viholliset ja sinun pitää väistellä niitä. Huoneissa voi olla mentorin esittämiä arvokysymyksiä tai vihollisia).  Pelissä päämekaniikka on liikkuminen joystickillä ja boostilla.',
                 'Hauskempi ja mielenkiintoisempi tapa pelaajalle arvioida, mitä arvoja hänellä on. Fishing Filosofy on lyhyt ja ytimekäs kalastuspeli, jossa jokainen kala edustaa arvoa, ja pelaajan on arvioitava, kuinka tärkeitä nämä arvot ovat hänelle yksilönä. Kun peli on loppu ja kaikki kalat on pyydystetty, pelaajalle esitetään arvoprofiili, joka näyttää, mitä arvoja hänellä on. Se on viihtyisä elämys, joka on suunniteltu käytettäväksi työelämässä olevien ja sinne siirtyvien MUUSA-mentorointiohjelmaan osallistuvien työkaluna.',
                 'Laivakatit laineilla on seikkailupeli, jossa teemana on kissat ja rento tunnelma.Pelissä vastaat kissojen esittämiin kysymyksiin, jotka kartuttavat lopullista pistemäärää joka sitten kertoo lopuksi arvosi. Peli on suunniteltu laajalle pelaajakunnalle, ja kaikki on alusta loppuun itsetehtyä.',
+                'AnimalGamessa pääset seikkailulle eläinkaupungin vilkkaalle kadulle. Tapaat Erinlaisia eläimiä joitten kanssa keskustellessa opit paljon uusia asioita itsestäsi.  Pelissä pääset vastaamaan kinkkisiin kysymyksiin ja riippuen vastauksistasi, pelin lopputulos muuttuu.',
                 // tiko2
                 '""Kokataan yhdessä" on yhteistyöhön kannustava kahden pelaajan kokkauspeli, jossa voit oppia kokkauksen ja kommunikaation perusteita rauhallisessa ympäristössä. Valitkaa resepti, työskennelkää yhdessä ja nauttikaa pelistä omassa tahdissanne. Ei rangaistuksia tai aikarajoitteita. Pelin tavoite on yksinkertainen: opi ja pidä hauskaa. Tämä on kokkauspeli kaikille!',
                 'Jätä kiireinen kaupunki taaksesi ja mene tapaamaan isoisäkissaasi hänen mökillensä, luvassa on hauska ja jännittävä kalastusreissu! Hooked! on peli joka testaa käyttäjän refleksejä kaloilla jotka yrittävät karata, mutta ole varuillasi! Paikalliset ovat huomanneet järveen heitettyjen roskien määrän kasvaneen! Yritä pitää kalat turvassa roskilta samalla kun väistelet niitä itsekin! Jää koukkuun!',
@@ -39,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
             gamesTitle: 'Games',
             websiteBtn: 'Website',
             trailerBtn: '▶ Watch trailer',
-            downloadBtn: 'Download here!',
-            footerText: '25Tiko Game Portal · 2025',
+            downloadBtn: 'Ithc.io',
+            footerText: '© 2026 Tiko Portal. All rights reserved.',
             podiumtittle: '🏆 Winners 🏆',
             gamecreator: 'Team',
             gameDescs: [
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 'In the game Pyramid of Elements, you collect keys inside a maze to open locked doors that lead to the top of the pyramid. The keys are guarded by enemies, and you must avoid them. The rooms may contain value-based questions presented by a mentor or enemies. The main gameplay mechanic is movement using a joystick and a boost ability.',
                 'A fun and more interesting way for the player to assess what values they hold in life. Fishing Filosofy is a short and sweet fishing game, where every fish represents a value, and the player must self-reflect and assess how important those values are to them as an individual. After the game is done and all fish have been caught, the player is presented with a value profile showing what values they hold. It\'s a cozy experience designed to be used as a tool for those in working life or just entering it participating in the MUUSA mentorship program.  ',
                 'Laivakatit Laineilla is an adventure game, where the focus is on cute cats and cozy vibes.In this game you will be answering questions, and your answers rack up points which willbe used to demonstrate your values. The game is made for a wide range of individualsand everything is self-made from the beginning to the end. ',
+                'AnimalGame is an adventure game where you explore the busiest street of the animal city. As you explore, you encounter many different residents of the street and that will lead  you to interesting conversations. These conversations will help you to learn more about yourself. The conversations also include choises that the player has to choose from and these choices will have an effect on how the ending of the game looks.',
                 // tiko2
                 '"Kokataan yhdessä" is a co-operative multiplayer cooking game, where you can learn the basics of cooking and communication in a stress-free environment. Choose the recipe, work together and enjoy the game at your own pace. There are no penalties or time limits. The goal is simple: learn and have fun. This is a cooking game for everyone!',
                 'Leave the hustle and bustle of the city behind and join your grandcat at his summer cabin for a fun and exciting fishing trip! Hooked! is a game that tests the user\'s reflexes by having them click on the fish that swim by, but be cautious! Locals have noticed increased quantities of trash falling into the lake! Try to keep the objects from hitting the marine life and avoid them yourself! Get Hooked!',
